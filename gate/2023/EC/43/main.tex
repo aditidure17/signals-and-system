@@ -143,19 +143,19 @@ Suppose $\lambda_1$ and $\lambda_2$ are two distinct eigenvalues of $A$, and $\n
 
 \textbf{Theories and Proofs:} \\
 \begin{align}
-Ax(t) &= \lambda x(t) 
+A\vec{y} &= \lambda \vec{y} 
 \end{align}
 Eigen values of inverse of a matrix is reciprocal of eigen value of the given matrix\\
 \begin{align}
-A^{-1}Ax(t) &= A^{-1}\lambda x(t) \\ \implies
-x(t) &= \lambda A^{-1}x(t)  \\ \implies
-A^{-1} x(t) &= \frac{1}{\lambda}x(t) \label{eq:gate23EC43.1}
+A^{-1}A\vec{y} &= A^{-1}\lambda \vec{y} \\ \implies
+\vec{y} &= \lambda A^{-1}\vec{y}  \\ \implies
+A^{-1} \vec{y} &= \frac{1}{\lambda}\vec{y} \label{eq:gate23EC43.1}
 \end{align}
 Eigen value of a matrix shifts by the same amount as that of the matrix.\\
 \begin{align}
-(A - \sigma I)x(t) &= Ax(t) - \sigma Ix(t) \\
-&= \lambda x(t) - \sigma x(t) \\
-&= (\lambda - \sigma) x(t) \label{eq:gate23EC43.2}
+(A - \sigma I)\vec{y} &= A\vec{y} - \sigma I\vec{y} \\
+&= \lambda \vec{y} - \sigma \vec{y} \\
+&= (\lambda - \sigma) \vec{y} \label{eq:gate23EC43.2}
 \end{align}
 \textbf{Sol:} \\
 Using Laplace transform: \\
@@ -171,25 +171,25 @@ sX(s) - {x}(0) &= AX(s) \\
 (sI - A)X(s) &= x(0) \\
 X(s) &= (sI - A)^{-1}{x}(0) \label{eq:gate23EC43.3}
 \end{align}
-
 From \tabref{tab:gate23EC43.1}, we can write $x(0)$ in terms of two linearly independent variables as 
 \begin{align}
-    x(0) &= \alpha_1v_1(t) + \alpha_2v_2(t) \\
-    &= \sum_{i=1}^{2}\alpha_iv_i(t) \label{eq:gate23EC43.4}
+    x(0) &= \alpha_1v_1 + \alpha_2v_2 \\
+    &= \sum_{i=1}^{2}\alpha_iv_i \label{eq:gate23EC43.4}
 \end{align}
 From \eqref{eq:gate23EC43.3}, \eqref{eq:gate23EC43.4}
 
 \begin{align}
- X(s) &= (sI - A)^{-1}\brak{\sum_{i=1}^{2}\alpha_iv_i(t)} 
+ X(s) &= (sI - A)^{-1}\brak{\sum_{i=1}^{2}\alpha_iv_i} \\
+ &= \sum_{i=1}^{2}(sI - A)^{-1}\alpha_iv_i
 \end{align}
 From \eqref{eq:gate23EC43.1}, \eqref{eq:gate23EC43.2}
 \begin{align}
-X(s) &=  \sum_{i=1}^{2}\frac{1}{s-\lambda_i}\brak{\alpha_iv_i(t)}
+X(s) &=  \sum_{i=1}^{2}\frac{1}{s-\lambda_i}\brak{\alpha_iv_i} 
 \end{align}
 Now take inverse Laplace Transform
 \begin{align}
-\mathcal{L}^{-1}\brak{X(s)} &= \mathcal{L}^{-1}\brak{\sum_{i=1}^{2}\frac{1}{s-\lambda_i}\brak{\alpha_iv_i(t)}} \\
-{x}(t) &= \sum_{i=1}^{2} e^{\lambda_it}\brak{\alpha_iv_i(t)} 
+\mathcal{L}^{-1}\brak{X(s)} &= \mathcal{L}^{-1}\brak{\sum_{i=1}^{2}\frac{1}{s-\lambda_i}\brak{\alpha_iv_i}} \\
+{x}(t) &= \sum_{i=1}^{2} e^{\lambda_it}\brak{\alpha_iv_i} 
 \end{align}
 
 Hence the answer is option (A).
