@@ -118,8 +118,8 @@
 %\renewcommand{\theequation}{\theenumi}
 
 Q: The state equation of a second order system is \\
-$ \dot{\bm{x}}(t) = A\bm{x}(t)$, \quad $\bm{x}(0)$ is the initial condition. \\
-Suppose $\lambda_1$ and $\lambda_2$ are two distinct eigenvalues of $A$, and $\nu_1$ and $\nu_2$ are the corresponding eigenvectors. For constants $\alpha_1$ and $\alpha_2$, the solution, $\bm{x}(t)$, of the state equation is \\
+$ \dot{{x}}(t) = A{x}(t)$, \quad ${x}(0)$ is the initial condition. \\
+Suppose $\lambda_1$ and $\lambda_2$ are two distinct eigenvalues of $A$, and $\nu_1$ and $\nu_2$ are the corresponding eigenvectors. For constants $\alpha_1$ and $\alpha_2$, the solution, ${x}(t)$, of the state equation is \\
 \begin{enumerate}[label=(\Alph*)]
 \item $\sum_{i=1}^{2} \alpha_ie^{\lambda_it}\bf{\nu}_i$
 \item $\sum_{i=1}^{2} \alpha_ie^{2\lambda_it}\bf{\nu}_i$
@@ -157,32 +157,40 @@ Eigen value of a matrix shifts by the same amount as that of the matrix.\\
 &= \lambda x(t) - \sigma x(t) \\
 &= (\lambda - \sigma) x(t) \label{eq:gate23EC43.2}
 \end{align}
-\textbf{Sol:}
+\textbf{Sol:} \\
 Using Laplace transform: \\
 Given Equation:
 \begin{align}
-\dot{\bm{x}}(t) &= A\bm{x}(t) \\
-\frac{d\bm{x}(t)}{dt} &= A\bm{x}(t) 
+\dot{{x}}(t) &= A{x}(t) \\
+\frac{d{x}(t)}{dt} &= A{x}(t) 
 \end{align}
 Taking Laplace Transform:
 \begin{align}
-\mathcal{L}\brak{\frac{d\bm{x}(t)}{dt}} &= \mathcal{L}\brak{A\bm{x}(t)} \\
-sX(s) - \bm{x}(0) &= AX(s) \\
+\mathcal{L}\brak{\frac{d{x}(t)}{dt}} &= \mathcal{L}\brak{A{x}(t)} \\
+sX(s) - {x}(0) &= AX(s) \\
 (sI - A)X(s) &= x(0) \\
-X(s) &= (sI - A)^{-1}\bm{x}(0) 
+X(s) &= (sI - A)^{-1}{x}(0) \label{eq:gate23EC43.3}
 \end{align}
-From \eqref{eq:gate23EC43.1} and \eqref{eq:gate23EC43.2}
+
+From \tabref{tab:gate23EC43.1}, we can write $x(0)$ in terms of two linearly independent variables as 
 \begin{align}
-&= \sum_{i=1}^{2}\frac{1}{s-\lambda_i}\bm{x}(0) 
+    x(0) &= \alpha_1v_1(t) + \alpha_2v_2(t) \\
+    &= \sum_{i=1}^{2}\alpha_iv_i(t) \label{eq:gate23EC43.4}
+\end{align}
+From \eqref{eq:gate23EC43.3}, \eqref{eq:gate23EC43.4}
+
+\begin{align}
+ X(s) &= (sI - A)^{-1}\brak{\sum_{i=1}^{2}\alpha_iv_i(t)} 
+\end{align}
+From \eqref{eq:gate23EC43.1}, \eqref{eq:gate23EC43.2}
+\begin{align}
+X(s) &=  \sum_{i=1}^{2}\frac{1}{s-\lambda_i}\brak{\alpha_iv_i(t)}
 \end{align}
 Now take inverse Laplace Transform
 \begin{align}
-\mathcal{L}^{-1}\brak{X(s)} &= \mathcal{L}^{-1}\brak{\sum_{i=1}^{2}\frac{1}{s-\lambda_i}\bm{x}(0)} \\
-\bm{x}(t) &= \sum_{i=1}^{2} e^{\lambda_it}\bm{x}(0) 
+\mathcal{L}^{-1}\brak{X(s)} &= \mathcal{L}^{-1}\brak{\sum_{i=1}^{2}\frac{1}{s-\lambda_i}\brak{\alpha_iv_i(t)}} \\
+{x}(t) &= \sum_{i=1}^{2} e^{\lambda_it}\brak{\alpha_iv_i(t)} 
 \end{align}
-From \tabref{tab:gate23EC43.1}
-\begin{align}
-&= \sum_{i=1}^{2}\alpha_ie^{\lambda_it}v_i
-\end{align} 
+
 Hence the answer is option (A).
 \end{document}
