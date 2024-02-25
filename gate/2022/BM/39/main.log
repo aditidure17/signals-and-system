@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.16)  24 FEB 2024 22:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.16)  25 FEB 2024 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1216,37 +1216,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
-(./tables/table.tex) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTe
-X warning (ext4): destination with the same identifier (name{figure.1}) has bee
-n already used, duplicate ignored
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}pdfTeX warning (ext4): des
+tination with the same identifier (name{figure.1}) has been already used, dupli
+cate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.176 \end{align}
-                 pdfTeX warning (ext4): destination with the same identifier (n
-ame{table.1}) has been already used, duplicate ignored
+l.169 \end{align}
+                  <./figs/qfig.png>] (./tables/table.tex) [2pdfTeX warning (ext
+4): destination with the same identifier (name{table.1}) has been already used,
+ duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.176 \end{align}
-                  <./figs/qfig.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
+l.228 \end{align}
+                 ]
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
 
  []
 
-[2] (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+[3] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29188 strings out of 480247
- 575069 string characters out of 5896151
- 832786 words of memory out of 5000000
- 46498 multiletter control sequences out of 15000+600000
+ 29212 strings out of 480247
+ 575404 string characters out of 5896151
+ 830950 words of memory out of 5000000
+ 46504 multiletter control sequences out of 15000+600000
  543437 words of font info for 185 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,10n,96p,408b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,11n,96p,408b,333s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1255,10 +1253,10 @@ fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (2 pages, 277926 bytes).
+Output written on main.pdf (3 pages, 282877 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 98 compressed objects within 1 object stream
+ 38 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
