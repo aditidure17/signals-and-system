@@ -49,8 +49,8 @@ complex *custom_convolve(complex *h, complex *x, int n) {
 }
 
 int main() {
-    FILE *f_time_fft = fopen("fft.txt", "w");
-    FILE *f_time_conv = fopen("conv.txt", "w");
+    FILE *f_time_fft = fopen("time_fft.txt", "w");
+    FILE *f_time_conv = fopen("time_conv.txt", "w");
 
     for (int j = 0; j <= 15; j++) {
         srand(time(0));

@@ -17,7 +17,7 @@
 \usepackage{mathtools}
 \usepackage{gensymb}
 \usepackage{comment}
-\usepackage[breaklinks=true]{hyperref}
+\usepackage{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
 \usepackage{gvv}                                        
@@ -62,9 +62,7 @@
 \section{Digital Filter}
 \label{input_sound}
 \item The sound file used for this code is obtained from the below link
-\begin{lstlisting}
-try later!!!!!!!!
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/song.wav}{codes/song.wav}
 \item 
 \label{Python code}
 A Python Code is written to achieve Audio Filtering 
@@ -109,13 +107,9 @@ y(n) = 0, n < 0 \label{prob:2.2}
 Sketch $y(n)$.\\
 Solve\\
 \solution  The C code calculates $y\brak{n}$ and generates values in a text file.
-\begin{lstlisting}
-try later!!!!!!!!!!!!!1
-\end{lstlisting} 
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/II.2.c}{/codes/II.2.py}
 The following code plots \eqref{prob:2.1} and \eqref{prob:2.2}
-\begin{lstlisting}
-try later!!!!!!!!!11
-\end{lstlisting}
+\href{audio_filter/codes/II.2.py}{codes/II.2.py}
 
 \begin{figure}[H]
 	\centering
@@ -164,7 +158,7 @@ Let
 n-k &= s  \\\implies
 n &= s+k \label{eq:l4}
 \end{align}
-From \eqref{eq: l3} and \eqref{eq:l4}
+From \eqref{eq:l3} and \eqref{eq:l4}
 \begin{align}
 Y(z) &= \sum_{s=-\infty}^{\infty} x(s) z^{-(s+k)} \\
 &= z^{-k}\sum_{s=-\infty}^{\infty} x(s) z^{-s} 
@@ -256,9 +250,7 @@ Plot $\abs{H\brak{e^{\j \omega}}}$.  Comment.  $H(e^{\j \omega})$ is
 known as the {\em Discret Time Fourier Transform} (DTFT) of $x(n)$.
 \\
 \solution The following code plots the magnitude of transfer function.
-\begin{lstlisting}
-try later!!!!!!!!!!!!
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/III.5.py}{/codes/III.5.py}
 Substituting $z = e^{j \omega}$ in \eqref{eq:freq_resp}, we get
 \begin{align}
 	\left|H\brak{e^{j\omega}}\right| &= \left|\frac{1 + e^{-2j\omega}}{1 + \frac{1}{2}e^{-j\omega}}\right| \\
@@ -301,9 +293,7 @@ using \eqref{eq:anun} and \eqref{eq:l6}.
 \item Sketch $h(n)$. Is it bounded? Convergent? 
 \\
 \solution The following code plots $h\brak{n}$ 
-\begin{lstlisting}
-try later!!!!!!!!!!!!!!!!!!!
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/IV.2.py}{codes/IV.2.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{figs/IV.2.png}
@@ -343,9 +333,7 @@ Definition of $h\brak{n}$: The output of the system when $\delta\brak{n}$ is giv
 The following code plots Fig. \ref{fig:hndef}. Note that this is the same as Fig. 
 \ref{fig:hn}. 
 
-\begin{lstlisting}
-try later!!!!!!!!
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/IV.2.py}{codes/IV.2.py}
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\columnwidth]{figs/IV.2.png}
@@ -368,9 +356,7 @@ Comment. The operation in \eqref{eq:convolution} is known as
 $y(n)$ in  Fig. 
 \ref{fig:xnyn}. 
 %
-\begin{lstlisting}
-try later
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/IV.5.py}{codes/IV.5.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{figs/IV.5.png}
@@ -413,15 +399,11 @@ y\brak{n}={\frac {1}{N}}\sum _{k=0}^{N-1}Y\brak{k}\cdot e^{\j 2\pi kn/N},\quad n
 \end{equation}
 
 \solution The above three questions are solved using the code below.
-\begin{lstlisting}
-try later
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/V.py}{codes/V.py}
 
 \item Repeat the previous exercise by computing $X(k), H(k)$ and $y(n)$ through FFT and IFFT.
 \solution The solution of this question can be found in the code below.
-\begin{lstlisting}
-try later
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/V.4.py}{codes/V.4.py}
 This code verifies the result by plotting the obtained result with the result obtained by IDFT.
 \begin{figure}[H]
 \centering
@@ -445,7 +427,7 @@ where $\omega=e^{-\frac{j2\pi}{N}}$ . Now any DFT equation can be written as
 \begin{align}
     \mtx{X} = \mtx{W}\mtx{x}
 \end{align}
-\noindent where
+\noindent where  $\mtx{x}$ is the original signal and $\mtx{X}$ is the frequency-domain representation. 
 \begin{align}
 	\mtx{x} = 
 	\begin{pmatrix}
@@ -463,12 +445,11 @@ Thus we can rewrite  \eqref{eq:fp} as:
 	\mtx{Y} = \mtx{X}\odot\mtx{H} = \brak{\mtx{W}\mtx{x}}\odot\brak{\mtx{W}\mtx{h}}
 \end{align}
 where the $\odot$ represents the Hadamard product which performs element-wise multiplication.
+This is specifically called "SCHUR PRODUCT" when defined for matrices.
 \end{enumerate}
 
 The below code computes $y\brak{n}$ by DFT Matrix and then plots it.
-\begin{lstlisting}
-try later
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/V.5.py}{codes/V.5.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{figs/V.5.png}
@@ -498,9 +479,7 @@ where the input signal is $x(n)$ and the output signal is $y(n)$ with initial va
 \textbf{signal. filtfilt} with your own routine and verify.\\
 
 \solution The below code gives the output of an Audio Filter without using the built in function signal.lfilter.
-\begin{lstlisting}
-try later!!
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/VI.1.py}{codes/VI.1.py}
 \begin{figure}[H]
 \centering
 \includegraphics[width=\columnwidth]{figs/VI.1.png}
@@ -552,9 +531,7 @@ h(n) &= \sum_{i}r(i)[p(i)]^nu(n) + \sum_{j}k(j)\delta(n - j)
 	\label{eq:h-n-expr}
 \end{align}
 The below code computes the values of $r\brak{i},p\brak{i} , k\brak{i}$ and plots $h\brak{n}$
-\begin{lstlisting}
-try later!!!
-\end{lstlisting}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/VI.2.py}{codes/VI.2.py}
 \input{tables/table}
 
 \textbf{Stability of h(n)}:\\
@@ -564,86 +541,6 @@ H\brak{z} &= \sum_{n = 0}^{\infty} h\brak{n}z^{-n}\\
 H(1)&= \sum_{n = 0}^{\infty}h(n)  = \frac{\sum_{k = 0}^{N}b(k)}{\sum_{k = 0}^{M}a(k)}< \infty
 \end{align}
 As both $a\brak{k}$ and $b\brak{k}$ are finite length sequences they converge.\\
-The below code plots Filter frequency response
-\begin{lstlisting}
-try later!
-\end{lstlisting}
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\columnwidth]{figs/VI.2.a.png}
-\caption{Frequency Response of Audio Filter}
-\label{fig:H(w)_6}
-\end{figure}
-The below code plots the Butterworth Filter in analog domain by using bilinear transform.
-\begin{align}
-    z=\frac{1+sT/2}{1-sT/2}
-\end{align}
-\begin{lstlisting}
-try later!
-\end{lstlisting}
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\columnwidth]{figs/VI.2.b.png}
-\caption{Butterworth Filter Frequency response in analog domain}
-\label{fig:H(w)_6}
-\end{figure}
-
-
-
-The below code plots the Pole-Zero Plot of the frequency response.
-\begin{lstlisting}
-try later!
-\end{lstlisting}
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\columnwidth]{figs/VI.2.c.png}
-\caption{There are complex poles. So $h\brak{n}$ should be damped sinusoid.}
-\label{fig:pole_zero_6.2}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=\columnwidth]{figs/VI.2.png}
-\caption{h(n) of Audio Filter.It is a damped sinusoid.}
-\label{fig:6.2_hn}
-\end{figure}
-
-
-\item Implement your own fft routine in C and call this fft in python.\\
-
-\solution The below C code computes FFT of a given sequence.
-\begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/fft.c
-\end{lstlisting}
-The C function involved in computing the FFT is called in the below python code and the result is computed.\\
-
-Before executing the  python code. Execute the following command.
-\begin{lstlisting}
-gcc -shared -o VI.3.so -fPIC VI.3.c
-\end{lstlisting}
-
-\begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/fft_python.py
-\end{lstlisting}
-
-\item Find the time complexities of computing y(n)
-using FFT/IFFT and convolution and Compare.\\
-\solution  The time required to compute y(n) using these two methods is calculated and the data is stored in a text file using the below C code.
-
-\begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6.4_time.c
-\end{lstlisting}
-The below python code extracts the data from these text files and plots Time vs $n$ for comparison.
-\begin{lstlisting}
-https://github.com/dhanushnayakh03/EE1205/tree/main/Audio_%20Filter/codes/6.4_plot.py
-\end{lstlisting}
-\begin{figure}[H]
-\centering
-\includegraphics[width=1\columnwidth]{figs/Time Complexity Comparision.png}
-\caption{The Complexity of FFT+IFFT method is $ O(nlogn)$ where as by convolution is $O(n^2)$}
-\label{fig:time_complexity}
-\end{figure}
-
 
 \item What is the sampling frequency of the input signal?\\
 \solution The Sampling Frequency is 44.1KHz
@@ -656,7 +553,7 @@ What is type, order and  cutoff-frequency of the above butterworth filter
 Modify the code with different input parameters and get the best possible output.
 
 \solution
-A better filtering was found on setting the order of the filter to be 5.
+A better filtering was found on setting the order of the filter to be ___.
 
 \end{enumerate}
 

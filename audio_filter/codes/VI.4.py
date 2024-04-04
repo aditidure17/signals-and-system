@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Read data from time_fft.txt
-conv_times = np.loadtxt('conv.txt')
+conv_times = np.loadtxt('time_conv.txt')
 
 # Read data from time_conv.txt
-fft_times = np.loadtxt('fft.txt')
+fft_times = np.loadtxt('time_fft.txt')
 
 
 sizes = np.array([2**i for i in range(16)])
