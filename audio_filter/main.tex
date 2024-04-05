@@ -66,14 +66,14 @@
 \item 
 \label{Python code}
 A Python Code is written to achieve Audio Filtering 
-\lstinputlisting{./codes/audio_filter.py}\label{prob:audio_filter_problem}
+\lstinputlisting{./codes/I.2.py}\label{prob:audio_filter_problem}
 
 \item 
 \label{Visualization}
 
 The audio file is analyzed using spectrogram using the online platform \href{https://academo.org/demos/spectrum-analyzer}{\url{https://academo.org/demos/spectrum-analyzer}}.\\
 
-The darker areas are those where the frequencies have very low intensities, and the orange and yellow areas represent frequencies that have high intensities in the sound.
+The darker areas are those where the frequencies have very low intensities, and the other areas represent frequencies that have high intensities in the sound.
 
 
 \begin{figure}[H]
@@ -300,6 +300,7 @@ using \eqref{eq:anun} and \eqref{eq:l6}.
 \caption{$h(n)$ as the inverse of $H(z)$}
 \label{fig:hn}
 \end{figure}
+It is bounded and convergent. \\
 \item The system with $h(n)$ is defined to be stable if
 \begin{equation}
 \sum_{n=-\infty}^{\infty}h(n) < \infty \label{eq:stabilty_condn}
@@ -333,10 +334,10 @@ Definition of $h\brak{n}$: The output of the system when $\delta\brak{n}$ is giv
 The following code plots Fig. \ref{fig:hndef}. Note that this is the same as Fig. 
 \ref{fig:hn}. 
 
-\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/IV.2.py}{codes/IV.2.py}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/IV.4.py}{codes/IV.4.py}
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=\columnwidth]{figs/IV.2.png}
+\includegraphics[width=\columnwidth]{figs/IV.4.png}
 \caption{$h(n)$ from the definition is same as \figref{fig:hn}}
 \label{fig:hndef}
 \end{figure}
@@ -369,11 +370,14 @@ $y(n)$ in  Fig.
 y(n) =  \sum_{n=-\infty}^{\infty}x(n-k)h(k)
 \end{equation}
 \solution
-In \eqref{eq:convolution}, we substitute $k = n - k$ to get
+In \eqref{eq:convolution}, replacing $k$ by $n-m$ 
 \begin{align}
-y\brak{n} &= \sum_{k=-\infty}^{\infty}x\brak{k}h\brak{n - k} \\
-		  &= \sum_{n - k=-\infty}^{\infty}x\brak{n - k}h\brak{k} \\
-		  &= \sum_{k=-\infty}^{\infty}x\brak{n - k}h\brak{k}
+y\brak{n} &= \sum_{n-m=-\infty}^{\infty}x(n-m)h(n-(n-m)) \\
+ &= \sum_{n-m=-\infty}^{\infty}x(n-m)h(m)
+\end{align}
+Since, the variable in summation is dummy, replacing $m$ by $k$,
+\begin{align}
+&= \sum_{k=-\infty}^{\infty}x(n-k)h(k)
 \end{align}
 \end{enumerate}
 
@@ -504,11 +508,11 @@ From \ref{eq:iir_filter_gen}
 \end{align}
 Difference Equation is given by :
 \begin{align}
-	&y(n) - \brak{3.66}y(n - 1) + \brak{5.05}y(n - 2) \nonumber \\
-	&- \brak{3.099}y(n - 3) + \brak{0.715}y(n - 4) \nonumber \\
-	&= \brak{1.45\times 10^{-5}}x(n) + \brak{5.74 \times 10^{-5}}x(n - 1) \nonumber \\
-	&+ \brak{8.62 \times 10^{-5}}x(n - 2) + \brak{5.74 \times 10^{-5}}x(n - 3) \nonumber \\
-	&+ \brak{1.43 \times 10^{-5}}x(n - 4)
+	&y(n) - \brak{3.62}y(n - 1) + \brak{4.95}y(n - 2) \nonumber \\
+	&- \brak{3.011}y(n - 3) + \brak{0.688}y(n - 4) \nonumber \\
+	&= \brak{2.15\times 10^{-5}}x(n) + \brak{8.60 \times 10^{-5}}x(n - 1) \nonumber \\
+	&+ \brak{1.29 \times 10^{-4}}x(n - 2) + \brak{8.60 \times 10^{-5}}x(n - 3) \nonumber \\
+	&+ \brak{2.15 \times 10^{-5}}x(n - 4)
 \end{align}
 From \eqref{eq:iir_filter_gen} 
 \begin{align}
@@ -534,6 +538,10 @@ The below code computes the values of $r\brak{i},p\brak{i} , k\brak{i}$ and plot
 \href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/VI.2.py}{codes/VI.2.py}
 \input{tables/table}
 
+\begin{figure}[H]
+    \includegraphics[width=0.8\columnwidth]{figs/VI.2.png }
+    \caption{h(n) of Audio Filter}
+\end{figure}
 \textbf{Stability of h(n)}:\\
 According to \eqref{eq:stabilty_condn}
 \begin{align}
@@ -541,6 +549,47 @@ H\brak{z} &= \sum_{n = 0}^{\infty} h\brak{n}z^{-n}\\
 H(1)&= \sum_{n = 0}^{\infty}h(n)  = \frac{\sum_{k = 0}^{N}b(k)}{\sum_{k = 0}^{M}a(k)}< \infty
 \end{align}
 As both $a\brak{k}$ and $b\brak{k}$ are finite length sequences they converge.\\
+
+
+
+
+
+
+
+The below figure plots the frequency response of the audio filter:
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/VI.2.a.py}{VI.2.a.py}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/VI.2.a.png}
+    \caption{Frequency Response of Audio Filter}
+\end{figure}
+
+The below figure plots the Butterworth filter in the analog domain using the bilinear transform:
+\begin{align}
+    z=\frac{1+sT/2}{1-sT/2}
+\end{align}
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/VI.2.b.py}{VI.2.b.py}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/VI.2.b.png}
+    \caption{Butterworth Filter Frequency Response in Analog Domain}
+\end{figure}
+
+The below figure plots the pole-zero plot of the frequency response:
+\href{https://github.com/aditidure17/signals-and-system/blob/main/audio_filter/codes/VI.2.c.py}{VI.2.c.py}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{figs/VI.2.c.png}
+    \caption{There are complex poles. So $h[n]$ should be damped sinusoid.}
+\end{figure}
+
+
+
+
+
+
+
+
 
 \item What is the sampling frequency of the input signal?\\
 \solution The Sampling Frequency is 44.1KHz
@@ -553,7 +602,7 @@ What is type, order and  cutoff-frequency of the above butterworth filter
 Modify the code with different input parameters and get the best possible output.
 
 \solution
-A better filtering was found on setting the order of the filter to be ___.
+A better filtering was found on setting the order of the filter to be 5.
 
 \end{enumerate}
 
