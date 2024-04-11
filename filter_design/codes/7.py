@@ -22,5 +22,5 @@ plt.xlabel('($\omega$/pi)')
 plt.ylabel('|H(r$\omega$)|')
 plt.title('FIR LOW PASS FILTER')
 plt.grid(True)
-
-plt.savefig("../figs/7.png")
+plt.savefig('../figs/FIR_Low_Filter.png')
+plt.show()
