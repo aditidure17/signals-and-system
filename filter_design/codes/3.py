@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
 s1 = -0.1907 - 1.0322j
 s2 = -0.4604 - 0.4276j
 s3 = -0.4604 + 0.4276j
-s4 = -0.1907 + 1.0322j
+s8 = -0.1907 + 1.0322j
 epsilon = 0.3
 Omega_Lp = 1
 
 # Generate the denominator polynomial
-den = np.poly([s1, s2, s3, s4])
+den = np.poly([s1, s2, s3, s8])
 
 # Define frequency range
 w = np.arange(0, 2.01, 0.01)
@@ -27,19 +27,19 @@ x = w / Omega_Lp
 c_N_interpolated = np.interp(x, Omega_L_values, c_N_values)
 Ha_values = 1 / np.sqrt(1 + epsilon**2 * c_N_interpolated**2)
 
-# Plot magnitude response for epsilon = 0.5
+# Plot magnitude response for epsilon = 0.3
 plt.figure()
 plt.plot(w, Ha_values, '*', label='Design')
 
 G_LP = 0.4166
 num = G_LP
 
-# Calculate magnitude response for epsilon = 0.5
+# Calculate magnitude response for epsilon = 0.3
 s = 1j * w
 H = num / np.polyval(den, s)
 magnitude = np.abs(H)
 
-# Plot magnitude response for epsilon = 0.5
+# Plot magnitude response for epsilon = 0.3
 plt.plot(w, magnitude, label='Specification')
 
 plt.title('Design vs Specification')
@@ -49,4 +49,5 @@ plt.legend()
 plt.grid(True)
 plt.ylim(0, 1.1)  # Set the y-axis limits from 0 to 2
 plt.savefig("../figs/3.png")
+plt.show()
 

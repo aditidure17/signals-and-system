@@ -196,7 +196,7 @@ The below code plots the pole-zero plot.
 The poles in the left half of the plane are considered in the design as we intend to design a stable system.\\
 Therefore the magnitude response is written as :- 
 \begin{align}
-    H_{a,LP}(s_L) &= \frac{G_{LP}}{\brak{s_L-s_5}\brak{s_L-s_6}\brak{s_L-s_7}\brak{s_L-s_8}}
+    H_{a,LP}(s_L) &= \frac{G_{LP}}{\brak{s_L-s_1}\brak{s_L-s_2}\brak{s_L-s_3}\brak{s_L-s_8}}
 \end{align}
 where $G_{LP}$ is the gain of the Low pass filter. Refer to \tabref{tab:values poles sk} for $s_k$ values.\\
 
@@ -206,7 +206,7 @@ We know that from \eqref{eq:mag_freq_response}:-
 \end{align}
 Substituting respective values in \eqref{eq:Gain_eq_LP} we get $G_{LP}=0.4166$
 \begin{align}
-     H_{a,LP}(s_L) &= \frac{0.4166}{\brak{s_L-s_5}\brak{s_L-s_6}\brak{s_L-s_7}\brak{s_L-s_8}}\\
+     H_{a,LP}(s_L) &= \frac{0.4166}{\brak{s_L-s_1}\brak{s_L-s_2}\brak{s_L-s_3}\brak{s_L-s_8}}\\
      &= \frac{0.4166}{s_{L}^4 + 1.3022s_{L}^3 +1.84781s_{L}^2 + 1.16512s_{L} +0.435003}\label{eq:design}
 \end{align}
 \begin{figure}[H]
