@@ -3,14 +3,14 @@ import matplotlib.pyplot as plt
 from scipy import signal
 
 # Define the cutoff frequency
-wc = 0.0553 * np.pi
+wc = 0.025 * np.pi
 
 # Create a frequency vector
 w = np.linspace(-np.pi, np.pi, 1000)
 
 # Define the magnitude response
 magnitude_response = np.zeros_like(w)
-magnitude_response[np.abs(w) <= wc] = 1
+magnitude_response[np.abs(w) <= wc] = 1   
 
 # Compute the phase response (it's zero for simplicity)
 phase_response = np.zeros_like(w)
@@ -35,7 +35,7 @@ n = np.arange(-50, 51)
 impulse_response = np.zeros_like(n, dtype=float)
 for i, ni in enumerate(n):
     if ni == 0:
-        impulse_response[i] = wc / np.pi
+        impulse_response[i] = wc / np.pi  #since it ow comes in denomenator
     else:
         impulse_response[i] = np.sin(wc * ni) / (ni * np.pi)
 
@@ -51,3 +51,4 @@ plt.grid()
 
 plt.tight_layout()
 plt.savefig("../figs/6.png")
+plt.show()
