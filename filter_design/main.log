@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.16)  12 APR 2024 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.1.16)  13 APR 2024 19:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,6 +1009,12 @@ File: ot1txr.fd 2000/12/15 v3.1
 )
 (./main.aux
 
+LaTeX Warning: Label `tab:3' multiply defined.
+
+
+LaTeX Warning: Label `tab:3' multiply defined.
+
+
 LaTeX Warning: Label `eq:h(n)desired_for_LPF' multiply defined.
 
 
@@ -1165,92 +1171,89 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 129--131
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./tables/3.tex)
+(./tables/4.tex) [2] (./tables/5.tex) [3]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
 
  []
 
 (./tables/1.tex)
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-[3] [4]
-<figs/1.png, id=109, 462.528pt x 346.896pt>
-File: figs/1.png Graphic file (type png)
-<use figs/1.png>
-Package pdftex.def Info: figs/1.png  used on input line 151.
+[4]
+<figs/H_a_lp.png, id=112, 462.528pt x 346.896pt>
+File: figs/H_a_lp.png Graphic file (type png)
+<use figs/H_a_lp.png>
+Package pdftex.def Info: figs/H_a_lp.png  used on input line 157.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
 
  []
 
-[5 <./figs/1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 172--174
-
- []
-
-(./tables/2.tex
+[5 <./figs/H_a_lp.png>] (./tables/2.tex
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
 (Font)              Font shape `OT1/txr/bx/n' tried instead on input line 16.
 )
-<figs/2.png, id=124, 462.528pt x 346.896pt>
-File: figs/2.png Graphic file (type png)
-<use figs/2.png>
-Package pdftex.def Info: figs/2.png  used on input line 192.
-(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
+<figs/pole.png, id=127, 578.16pt x 433.62pt>
+File: figs/pole.png Graphic file (type png)
+<use figs/pole.png>
+Package pdftex.def Info: figs/pole.png  used on input line 190.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
  []
 
-<figs/3.png, id=140, 462.528pt x 346.896pt>
-File: figs/3.png Graphic file (type png)
-<use figs/3.png>
-Package pdftex.def Info: figs/3.png  used on input line 214.
+[7 <./figs/pole.png>]
+<figs/veri.png, id=153, 462.528pt x 346.896pt>
+File: figs/veri.png Graphic file (type png)
+<use figs/veri.png>
+Package pdftex.def Info: figs/veri.png  used on input line 229.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-[7 <./figs/2.png>]
-Overfull \hbox (68.7106pt too wide) detected at line 239
+ [8 <./figs/veri.png>]
+Overfull \hbox (68.7106pt too wide) detected at line 265
 []
  []
 
-[8 <./figs/3.png>]
-<figs/4.png, id=171, 462.528pt x 346.896pt>
-File: figs/4.png Graphic file (type png)
-<use figs/4.png>
-Package pdftex.def Info: figs/4.png  used on input line 246.
+<figs/H_a_bp.png, id=172, 462.528pt x 346.896pt>
+File: figs/H_a_bp.png Graphic file (type png)
+<use figs/H_a_bp.png>
+Package pdftex.def Info: figs/H_a_bp.png  used on input line 276.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-
-Overfull \hbox (129.8489pt too wide) detected at line 260
+[9]
+Overfull \hbox (129.8489pt too wide) detected at line 295
 []
  []
 
-[9 <./figs/4.png>]
-<figs/5.png, id=183, 462.528pt x 346.896pt>
-File: figs/5.png Graphic file (type png)
-<use figs/5.png>
-Package pdftex.def Info: figs/5.png  used on input line 265.
+<figs/ana_to_digi.png, id=192, 462.528pt x 346.896pt>
+File: figs/ana_to_digi.png Graphic file (type png)
+<use figs/ana_to_digi.png>
+Package pdftex.def Info: figs/ana_to_digi.png  used on input line 300.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-<figs/6.png, id=184, 722.7pt x 433.62pt>
-File: figs/6.png Graphic file (type png)
-<use figs/6.png>
-Package pdftex.def Info: figs/6.png  used on input line 283.
+[10 <./figs/H_a_bp.png>]
+<figs/freq_resp_imp_resp_ideal.png, id=203, 722.7pt x 433.62pt>
+File: figs/freq_resp_imp_resp_ideal.png Graphic file (type png)
+<use figs/freq_resp_imp_resp_ideal.png>
+Package pdftex.def Info: figs/freq_resp_imp_resp_ideal.png  used on input line 
+325.
 (pdftex.def)             Requested size: 345.0pt x 206.9972pt.
- [10 <./figs/5.png>] [11 <./figs/6.png>]
-<figs/7.png, id=205, 462.528pt x 346.896pt>
-File: figs/7.png Graphic file (type png)
-<use figs/7.png>
-Package pdftex.def Info: figs/7.png  used on input line 346.
+ [11 <./figs/ana_to_digi.png>] [12 <./figs/freq_resp_imp_resp_ideal.png>]
+<figs/fir_lp.png, id=225, 462.528pt x 346.896pt>
+File: figs/fir_lp.png Graphic file (type png)
+<use figs/fir_lp.png>
+Package pdftex.def Info: figs/fir_lp.png  used on input line 394.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
- [12 <./figs/7.png>]
-<figs/8.png, id=217, 462.528pt x 346.896pt>
-File: figs/8.png Graphic file (type png)
-<use figs/8.png>
-Package pdftex.def Info: figs/8.png  used on input line 376.
+ [13 <./figs/fir_lp.png>]
+<figs/fir_bp.png, id=240, 462.528pt x 346.896pt>
+File: figs/fir_bp.png Graphic file (type png)
+<use figs/fir_bp.png>
+Package pdftex.def Info: figs/fir_bp.png  used on input line 428.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-
-[13 <./figs/8.png>] (./main.aux)
+ [14 <./figs/fir_bp.png>]
+(./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1258,13 +1261,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: C2D8058AB543BC3B30F82EC98E695026;1717.
  ) 
 Here is how much of TeX's memory you used:
- 42193 strings out of 480247
- 977088 string characters out of 5896151
- 1463280 words of memory out of 5000000
- 59351 multiletter control sequences out of 15000+600000
+ 42236 strings out of 480247
+ 978044 string characters out of 5896151
+ 1466261 words of memory out of 5000000
+ 59362 multiletter control sequences out of 15000+600000
  508125 words of font info for 120 fonts, out of 8000000 for 9000
  17 hyphenation exceptions out of 8191
- 115i,21n,118p,424b,1180s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 115i,21n,118p,424b,1182s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
@@ -1273,10 +1276,10 @@ onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (13 pages, 310679 bytes).
+Output written on main.pdf (14 pages, 315356 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 239 compressed objects within 3 object streams
- 106 named destinations out of 1000 (max. 500000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 127 named destinations out of 1000 (max. 500000)
  141 words of extra memory for PDF output out of 10000 (max. 10000000)
 
